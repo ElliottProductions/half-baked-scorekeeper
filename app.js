@@ -124,6 +124,8 @@ function displayAllGames() {
         const gameEl = renderGame(game.name1, game.name2, game.score1, game.score2);
         gameEl.classList.add('past');
         pastGamesEl.append(gameEl);
+        const deleteButton = document.createElement('button');
+        pastGamesEl.append(deleteButton);
     }
     
 }
