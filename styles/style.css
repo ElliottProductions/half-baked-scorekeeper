@@ -77,6 +77,10 @@ p {
     margin: var(--gutter);
 }
 
+.past {
+    background-color:bisque;
+}
+
 
 #past-games-container {
     display: flex;
@@ -194,4 +198,9 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#past-games-container {
+    
+    
 }
