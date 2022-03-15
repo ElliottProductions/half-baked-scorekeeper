@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { renderGame, renderTeam } from './render-utils.js';
+import { renderGame } from './render-utils.js';
 const currentGameEl = document.getElementById('current-game-container');
 const pastGamesEl = document.getElementById('past-games-container');
 
@@ -24,7 +24,7 @@ let name2 = '';
 let score1 = 0;
 let score2 = 0;
 
-nameFormButton.addEventListener('click', (e) => {
+nameFormButton.addEventListener('click', () => {
     // get the name data from the form
 
     // set the state to this data from the form
@@ -80,7 +80,7 @@ finishGameButton.addEventListener('click', () => {
         name2 : name2,
         score1 : score1,
         score2 : score2
-    }
+    };
     // then push it to your array in state
     pastGames.push(pastGame);
 
@@ -124,8 +124,8 @@ function displayAllGames() {
         const gameEl = renderGame(game.name1, game.name2, game.score1, game.score2);
         gameEl.classList.add('past');
         pastGamesEl.append(gameEl);
-        const deleteButton = document.createElement('button');
-        pastGamesEl.append(deleteButton);
+        //const deleteButton = document.createElement('button');
+        //pastGamesEl.append(deleteButton);
     }
     
 }
